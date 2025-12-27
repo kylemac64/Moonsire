@@ -516,13 +516,29 @@
 
         async function checkLiveStatus() {
             try {
-                const response = await fetch('https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=E9pVl&username=moonsire');
+                // Using allorigins proxy to bypass CORS restrictions
+                const cbApiUrl = 'https://chaturbate.com/api/public/affiliates/onlinerooms/?wm=E9pVl&username=moonsire';
+                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(cbApiUrl)}`;
+                
+                const response = await fetch(proxyUrl);
                 const data = await response.json();
-                const isLive = data && data.results && data.results.length > 0;
+                
+                // The actual data from the API is inside 'contents' as a string
+                const cbData = JSON.parse(data.contents);
+                
+                const isLive = cbData && cbData.results && cbData.results.length > 0;
                 const badge = document.getElementById('liveBadge');
-                if (isLive) { badge.classList.add('show'); } else { badge.classList.remove('show'); }
-            } catch (error) { console.error('Error checking live status:', error); }
+                
+                if (isLive) { 
+                    badge.classList.add('show'); 
+                } else { 
+                    badge.classList.remove('show'); 
+                }
+            } catch (error) { 
+                console.error('Error checking live status:', error); 
+            }
         }
+        
         checkLiveStatus();
         setInterval(checkLiveStatus, 120000);
     </script>
