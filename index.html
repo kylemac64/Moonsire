@@ -13,7 +13,10 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #4a2b6f 0%, #1a0b2e 40%, #000000 100%);
+      background: 
+        linear-gradient(135deg, #4a2b6f 0%, #1a0b2e 40%, #000000 100%),
+        radial-gradient(ellipse at top left, rgba(138, 98, 178, 0.1), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(100, 60, 140, 0.08), transparent 50%);
       position: relative;
       min-height: 100vh;
       padding: 20px;
@@ -28,8 +31,9 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(ellipse at 20% 30%, rgba(138, 98, 178, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 70%, rgba(100, 60, 140, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 30% 20%, rgba(138, 98, 178, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(100, 60, 140, 0.12) 0%, transparent 40%),
+        linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
       pointer-events: none;
       z-index: 0;
     }
@@ -123,7 +127,9 @@
     }
 
     .link-card {
-      background: rgba(255,255,255,0.1);
+      background: 
+        linear-gradient(135deg, rgba(74, 43, 111, 0.3) 0%, rgba(26, 11, 46, 0.4) 40%, rgba(0, 0, 0, 0.5) 100%),
+        radial-gradient(circle at top left, rgba(138, 98, 178, 0.08), transparent 50%);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
@@ -172,7 +178,9 @@
     }
 
     .schedule-box {
-      background: rgba(255,255,255,0.1);
+      background: 
+        linear-gradient(135deg, rgba(74, 43, 111, 0.3) 0%, rgba(26, 11, 46, 0.4) 40%, rgba(0, 0, 0, 0.5) 100%),
+        radial-gradient(circle at top left, rgba(138, 98, 178, 0.08), transparent 50%);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
@@ -196,7 +204,9 @@
     }
 
     .donate-card {
-      background: rgba(255,255,255,0.1);
+      background: 
+        linear-gradient(135deg, rgba(74, 43, 111, 0.3) 0%, rgba(26, 11, 46, 0.4) 40%, rgba(0, 0, 0, 0.5) 100%),
+        radial-gradient(circle at top left, rgba(138, 98, 178, 0.08), transparent 50%);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
@@ -225,7 +235,9 @@
     }
 
     .qr-section {
-      background: rgba(255,255,255,0.1);
+      background: 
+        linear-gradient(135deg, rgba(74, 43, 111, 0.3) 0%, rgba(26, 11, 46, 0.4) 40%, rgba(0, 0, 0, 0.5) 100%),
+        radial-gradient(circle at top left, rgba(138, 98, 178, 0.08), transparent 50%);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
@@ -281,16 +293,14 @@
 
     <div id="about" class="tab-content active">
       <div class="schedule-box">
-        <div class="schedule-title">✨ About Me</div>
-        <p style="line-height: 1.6; color: rgba(255,255,255,0.8);">
-          Irish man living in Romania
-          179cm/5'11" tall, 62kg
-          Microbiologist by vocation
-          Working as a developer
-          I stream as often as I can manage
-          I want to put my unique brand of intimacy out there for all to enjoy
-          My aim is to provide a safe space where everybody feels welcome
-        </p>
+        <div class="schedule-title">About Me</div>
+        <p style="margin: 0; color: rgba(255,255,255,0.9);">Irish man living in Romania</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">179cm/5'11" tall, 62kg</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">Microbiologist by vocation</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">Working as a developer</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">I stream as often as I can manage</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">I want to put my unique brand of intimacy out there for all to enjoy</p>
+        <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.9);">My aim is to provide a safe space where everybody feels welcome</p>
       </div>
     </div>
 
