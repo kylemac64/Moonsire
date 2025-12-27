@@ -288,10 +288,9 @@
       text-align: center;
     }
 
-    /* Donate Grid Styles */
     .donate-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Force 3 columns in one row */
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-bottom: 30px;
     }
@@ -303,30 +302,25 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
-      padding: 24px;
+      padding: 12px;
       text-align: center;
       text-decoration: none;
       transition: all 0.3s ease;
       color: #fff;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
     }
 
     .donate-card:hover {
-      transform: translateY(-6px) scale(1.02);
+      transform: translateY(-6px);
       box-shadow: 0 12px 24px rgba(138, 98, 178, 0.4);
       border-color: rgba(255,255,255,0.3);
     }
 
-    .donate-icon {
-      font-size: 40px;
-      margin-bottom: 12px;
-    }
-
-    .donate-name {
-      font-weight: 700;
-      font-size: 16px;
-    }
+    .donate-icon { font-size: 32px; }
+    .donate-name { font-weight: 700; font-size: 14px; margin-top: 4px; }
 
     .section-divider {
       height: 2px;
@@ -409,17 +403,14 @@
       </a>
 
       <div class="donate-grid">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=GFH3YLJTAXKQN" target="_blank" class="donate-card">
-          <div class="donate-icon">💳</div>
-          <div class="donate-name">PayPal</div>
+        <a href="https://instagram.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none;">
+          <img src="Instagram.png" alt="Instagram" style="width: 60px; height: 60px; mix-blend-mode: screen; filter: saturate(1.7) brightness(1.4);">
         </a>
-        <a href="https://throne.com/moonsire" target="_blank" class="donate-card">
-          <div class="donate-icon">🎁</div>
-          <div class="donate-name">Throne</div>
+        <a href="https://twitter.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none;">
+          <img src="X.png" alt="X / Twitter" style="width: 70px; height: 70px; mix-blend-mode: screen; filter: saturate(1.7) brightness(1.7);">
         </a>
-        <a href="https://ko-fi.com/moonsire" target="_blank" class="donate-card">
-          <div class="donate-icon">☕</div>
-          <div class="donate-name">Ko-fi</div>
+        <a href="https://reddit.com/u/bigcocksixpack" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none;">
+          <img src="Reddit.png" alt="Reddit" style="width: 60px; height: 60px; mix-blend-mode: screen; filter: saturate(2.0) brightness(1.6);">
         </a>
       </div>
     </div>
