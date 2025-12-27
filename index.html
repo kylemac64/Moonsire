@@ -440,13 +440,13 @@
             <div class="section-divider"></div>
 
             <div class="donate-grid">
-                <a href="https://instagram.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px;">
+                <a href="https://instagram.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px; padding: 12px;">
                     <img src="Instagram.png" alt="Instagram" style="width: 60px; height: 60px; mix-blend-mode: screen; filter: saturate(1.7) brightness(1.4);">
                 </a>
-                <a href="https://twitter.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px;">
+                <a href="https://twitter.com/moonsire" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px; padding: 12px;">
                     <img src="X.png" alt="X" style="width: 70px; height: 70px; mix-blend-mode: screen; filter: saturate(1.7) brightness(1.7);">
                 </a>
-                <a href="https://reddit.com/u/bigcocksixpack" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px;">
+                <a href="https://reddit.com/u/bigcocksixpack" target="_blank" class="donate-card" style="opacity: 0.6; pointer-events: none; min-height: 100px; padding: 12px;">
                     <img src="Reddit.png" alt="Reddit" style="width: 60px; height: 60px; mix-blend-mode: screen; filter: saturate(2.0) brightness(1.6);">
                 </a>
             </div>
@@ -509,16 +509,12 @@
         function animateWave() {
             waveX += velocityX;
             waveY += velocityY;
-
             if (waveX >= 90 || waveX <= 10) velocityX *= -1;
             if (waveY >= 90 || waveY <= 10) velocityY *= -1;
-
             document.documentElement.style.setProperty('--wave-x', waveX + '%');
             document.documentElement.style.setProperty('--wave-y', waveY + '%');
-
             requestAnimationFrame(animateWave);
         }
-
         animateWave();
 
         async function checkLiveStatus() {
@@ -527,16 +523,9 @@
                 const data = await response.json();
                 const isLive = data && data.results && data.results.length > 0;
                 const badge = document.getElementById('liveBadge');
-                if (isLive) {
-                    badge.classList.add('show');
-                } else {
-                    badge.classList.remove('show');
-                }
-            } catch (error) {
-                console.error('Error checking live status:', error);
-            }
+                if (isLive) { badge.classList.add('show'); } else { badge.classList.remove('show'); }
+            } catch (error) { console.error('Error checking live status:', error); }
         }
-
         checkLiveStatus();
         setInterval(checkLiveStatus, 120000);
     </script>
