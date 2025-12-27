@@ -357,8 +357,8 @@
     }
 
     .donate-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      display: flex;
+      justify-content: center;
       gap: 16px;
       margin-bottom: 30px;
     }
@@ -370,7 +370,8 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 16px;
-      padding: 24px;
+      padding: 12px;
+      flex: 1;
       text-align: center;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -407,13 +408,13 @@
     }
 
     .donate-icon {
-      font-size: 40px;
-      margin-bottom: 12px;
+      font-size: 24px;
+      margin-bottom: 4px;
     }
 
     .donate-name {
       font-weight: 700;
-      font-size: 16px;
+      font-size: 13px;
     }
 
     .section-divider {
@@ -453,12 +454,6 @@
       to {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .donate-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -576,17 +571,17 @@
         btn.classList.remove('active');
       });
       
-      document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
+      const content = document.getElementById(tabName);
+      if (content) content.classList.add('active');
+      if (event && event.target) event.target.classList.add('active');
     }
 
     // Bouncing wave effect
-    let waveX = Math.random() * 60 + 20; // Start at random position
+    let waveX = Math.random() * 60 + 20;
     let waveY = Math.random() * 60 + 20;
     
-    // Generate more balanced velocities
-    let angle = Math.random() * Math.PI * 2; // Random angle
-    let speed = 0.105; // 30% slower than 0.15
+    let angle = Math.random() * Math.PI * 2;
+    let speed = 0.105;
     let velocityX = Math.cos(angle) * speed;
     let velocityY = Math.sin(angle) * speed;
 
